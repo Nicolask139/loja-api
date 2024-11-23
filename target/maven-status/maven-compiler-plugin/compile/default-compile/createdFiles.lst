@@ -1,0 +1,6 @@
+com/projeto/loja/Repository/UsuarioRepository.class
+com/projeto/loja/Service/UsuarioService.class
+com/projeto/loja/Controller/UsuarioController.class
+com/projeto/loja/Model/UsuarioModel.class
+com/projeto/loja/LojaApplication.class
+com/projeto/loja/Controller/HelloWorldController.class
