@@ -13,7 +13,6 @@ public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     public UsuarioModel cadastrarUsuario(UsuarioModel usuario) {
-        System.out.println("Senha recebida: " + usuario.getSenha());  // Log da senha
 
         if (usuarioRepository.existsByEmail(usuario.getEmail())) {
             throw new IllegalArgumentException("E-mail já cadastrado");

@@ -1,4 +1,4 @@
-package com.projeto.loja.config;
+package com.projeto.loja.Util;
 
 import com.projeto.loja.Model.UsuarioModel;
 import io.jsonwebtoken.Jwts;

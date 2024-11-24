@@ -1,4 +1,5 @@
 package com.projeto.loja.Model;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -32,6 +33,7 @@ public class UsuarioModel {
     @Column (name = "telefone")
     private String telefone;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "ddMMyyyy")
     @Column (name = "data_nascimento")
     private LocalDate dataNascimento;
 

@@ -5,11 +5,10 @@ import com.projeto.loja.Model.LoginResponseDTO;
 import com.projeto.loja.Model.UsuarioModel;
 import com.projeto.loja.Service.UsuarioService;
 import com.projeto.loja.Repository.UsuarioRepository;
-import com.projeto.loja.config.JwtUtil;
+import com.projeto.loja.Util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 
 @RestController
 @RequestMapping("/usuarios")
