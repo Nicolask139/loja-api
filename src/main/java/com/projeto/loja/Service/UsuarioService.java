@@ -19,7 +19,7 @@ public class UsuarioService {
         usuario.setTipoUsuario("comum");
         usuario.setStatus("ativo");
         usuario.setDataCadastro(LocalDate.now());
-        System.out.println(usuario.getDataCadastro());
+
 
         validarCamposNaoVazios(usuario);
 
@@ -58,8 +58,8 @@ public class UsuarioService {
     @SneakyThrows
     public UsuarioModel validarCamposNaoVazios(UsuarioModel usuario) {
         for (Field field : usuario.getClass().getDeclaredFields()) {
-            field.setAccessible(true); // Permite acesso a campos privados
-            Object value = field.get(usuario); // Obtém o valor do campo
+            field.setAccessible(true);
+            Object value = field.get(usuario);
             System.out.println(value);
 
             if (value == null || value == "") {
@@ -68,6 +68,7 @@ public class UsuarioService {
         }
         return usuario;
     }
+
 }
 
 

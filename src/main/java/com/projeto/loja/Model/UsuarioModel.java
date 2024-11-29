@@ -33,7 +33,7 @@ public class UsuarioModel {
     @Column(name = "telefone")
     private String telefone;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "ddMMyyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     @Column(name = "data_nascimento")
     private LocalDate dataNascimento;
 

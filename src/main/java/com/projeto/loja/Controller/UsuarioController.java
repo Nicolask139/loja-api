@@ -1,6 +1,4 @@
 package com.projeto.loja.Controller;
-
-
 import com.projeto.loja.Model.LoginResponseDTO;
 import com.projeto.loja.Model.UsuarioModel;
 import com.projeto.loja.Service.UsuarioService;
