@@ -41,5 +41,17 @@ public class ProdutoModel {
     @Column (name ="imagem_url", nullable = false)
     private String imagemUrl;
 
+    public ProdutoModel() {
 
+    }
+
+    public ProdutoModel(String nome, String descricao, double preco, int estoque,  String categoria, String imagemUrl, String marca) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.estoque = estoque;
+        this.categoria = categoria;
+        this.imagemUrl = imagemUrl;
+        this.marca = marca;
+    }
 }

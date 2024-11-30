@@ -1,5 +1,5 @@
 package com.projeto.loja.Controller;
-import com.projeto.loja.Model.LoginResponseDTO;
+import com.projeto.loja.DTO.RespostaLoginDTO;
 import com.projeto.loja.Model.UsuarioModel;
 import com.projeto.loja.Service.UsuarioService;
 import com.projeto.loja.Repository.UsuarioRepository;
@@ -22,14 +22,14 @@ public class UsuarioController {
     @PostMapping("/cadastrar")
     public ResponseEntity<?> cadastrarUsuario(@Valid @RequestBody UsuarioModel usuario) {
             UsuarioModel novoUsuario = usuarioService.cadastrarUsuario(usuario);
-            return ResponseEntity.ok(novoUsuario);
+            return ResponseEntity.ok("Usuario Cadastrado com sucesso");
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginUsuario(@RequestBody LoginResponseDTO login) {
+    public ResponseEntity<?> loginUsuario(@RequestBody RespostaLoginDTO login) {
         UsuarioModel usuario = usuarioService.loginUsuario(login.getEmail(), login.getSenha());
         String token = JwtUtil.generateJwtToken(usuario);
-        LoginResponseDTO response = new LoginResponseDTO(usuario.getNome(), usuario.getEmail(), token);
+        RespostaLoginDTO response = new RespostaLoginDTO(usuario.getNome(), usuario.getEmail(), token);
         return ResponseEntity.ok(response);
         }
     }
